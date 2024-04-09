@@ -1,69 +1,121 @@
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
-import { FaEye, FaEyeSlash, FaFacebook } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
 import { AuthContext } from "../../providers/AuthProviders";
 import { updateProfile } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2';
+
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
-
-    const {createUserWithEmailPassword, createWithGoogle, createWithFacebook} = useContext(AuthContext);
+    const { createUserWithEmailPassword, createWithGoogle, createWithGithub } = useContext(AuthContext);
 
     const navigate = useNavigate();
 
+
     const handleRegister = (e) => {
         e.preventDefault();
+
         const name = e.target.name.value;
         const email = e.target.email.value;
         const photoUrl = e.target.photoUrl.value;
-        const password  = e.target.password.value;
+        const password = e.target.password.value;
         console.log(name, email, photoUrl, password);
+
+        if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}/.test(password)) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Password should be at least 6 characters. Must have an Uppercase letter and a Lowercase letter",
+            });
+            return;
+        }
+
         createUserWithEmailPassword(email, password)
-        .then(result => {
-            console.log("registration Successful", result.user);
-            updateProfile(auth.currentUser, {
-                displayName: name, photoURL: photoUrl
-              }).then(() => {
-                // Profile updated!
-                // ...
-              }).catch((error) => {
-                // An error occurred
-                // ...
+            .then(result => {
+                console.log("registration Successful", result.user);
+                // notify();
+                updateProfile(auth.currentUser, {
+                    displayName: name, photoURL: photoUrl
+                }).then(() => {
+                    // Profile updated!
+                    // ...
+                }).catch((error) => {
+                    // An error occurred
+                    // ...
+                    console.log(error.message);
+                });
+                result.user.displayName = name;
+                result.user.photoURL = photoUrl;
+                Swal.fire({
+                    icon: "success",
+                    title: "Login Successful!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                navigate("/");
+            })
+            .catch(error => {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: error.message,
+                });
                 console.log(error.message);
-              });
-            result.user.displayName = name;
-            result.user.photoURL = photoUrl;
-            navigate("/");
-        })
-        .catch(error => {
-            console.log(error.message);
-        })
+            });
+        
+        e.target.reset();
     }
 
     const handleRegisterWithGoogle = () => {
         createWithGoogle()
-        .then((result) => {
-            console.log(result.user);
-            navigate("/");
-        })
-        .catch((error) => {
-            console.log(error.message);
-        })
+            .then((result) => {
+                console.log(result.user);
+                Swal.fire({
+                    icon: "success",
+                    title: "Login Successful!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                navigate("/");
+            })
+            .catch((error) => {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: error.message,
+                });
+                console.log(error.message);
+            })
     }
 
 
-    const handleRegisterWithFacebook = () => {
-        createWithFacebook()
-        .then(result => {
-            console.log(result.user);
-            navigate("/");
-        })
-        .catch(error => {
-            console.log(error.message);
-        });
+    const handleRegisterWithGithub = () => {
+        createWithGithub()
+            .then(result => {
+                console.log(result.user);
+                Swal.fire({
+                    icon: "success",
+                    title: "Login Successful!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                navigate("/");
+            })
+            .catch(error => {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: error.message,
+                });
+                console.log(error.message);
+            });
     }
+
 
     return (
         <div className="hero min-h-screen bg-base-200 mx-auto">
@@ -111,10 +163,12 @@ const Register = () => {
                 <div className="text-center flex flex-col space-y-2 mt-5">
                     <div className="border-b-2 border-orange-500"></div>
                     <button className="btn btn-outline btn-secondary w-full" onClick={handleRegisterWithGoogle}><FcGoogle></FcGoogle> Register With Google</button>
-                    <button className="btn btn-outline w-full" onClick={handleRegisterWithFacebook}><FaFacebook></FaFacebook> Register With Facebook</button>
+                    <button className="btn btn-outline w-full" onClick={handleRegisterWithGithub}><FaGithub></FaGithub> Register With Github</button>
                     <p>Already have an account ? <span className="font-bold text-blue-600"><Link to="/login">Login Here</Link></span></p>
                 </div>
+
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

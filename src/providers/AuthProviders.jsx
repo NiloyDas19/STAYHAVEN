@@ -1,41 +1,50 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import auth from "../firebase/firebase.config";
-import { FacebookAuthProvider, GoogleAuthProvider, signInWithPopup, signInWithRedirect } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 export const  AuthContext  = createContext(null);
 
 const AuthProviders = ({children}) => {
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+
     const provider = new GoogleAuthProvider();
-    const facebookProvider = new FacebookAuthProvider();
+    const githubProvider = new GithubAuthProvider();
 
     const createUserWithEmailPassword = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
     const createWithGoogle = () => {
+        setLoading(true);
         return signInWithPopup(auth, provider);
     }
 
-    const createWithFacebook = () => {
-        return signInWithPopup(auth, facebookProvider);
+    const createWithGithub = () => {
+        setLoading(true);
+        return signInWithPopup(auth, githubProvider);
     }
 
     const loginWithEmailPassword = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
     const loginWithGoogle = () => {
-        return signInWithRedirect(auth, provider);
+        setLoading(true);
+        return signInWithPopup(auth, provider);
     }
 
-    const loginWithFacebook = () => {
-        return signInWithRedirect(auth, facebookProvider);
+    const loginWithGithub = () => {
+        setLoading(true);
+        return signInWithPopup(auth, githubProvider);
     }
 
     const logOut = () => {
+        setLoading(true);
         return signOut(auth);
     }
 
@@ -45,6 +54,8 @@ const AuthProviders = ({children}) => {
         const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
            console.log('What happend');
            setUser(currentUser);
+           console.log(currentUser);
+           setLoading(false);
         });
 
         return () =>  {
@@ -62,8 +73,9 @@ const AuthProviders = ({children}) => {
         logOut,
         createWithGoogle,
         loginWithGoogle,
-        createWithFacebook,
-        loginWithFacebook,
+        createWithGithub,
+        loginWithGithub,
+        loading,
     }
 
     return (
