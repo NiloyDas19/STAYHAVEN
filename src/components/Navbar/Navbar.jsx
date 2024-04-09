@@ -1,8 +1,23 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProviders";
 
 
 const Navbar = () => {
-    
+    const {user, logOut} = useContext(AuthContext);
+
+
+    const handleLogOut = () => {
+        console.log(user);
+        logOut()
+        .then(() => {
+            console.log("Log Out Successful");
+        })
+        .catch((error) => {
+            console.log(error.message);
+        })
+    }
+
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/update-profile">Update Profile</NavLink></li>
@@ -29,14 +44,22 @@ const Navbar = () => {
                     }
                 </ul>
             </div>
-            <div className="navbar-end">
-                <div className="avatar tooltip tooltip-bottom" data-tip="Niloy">
-                    <div className="w-11 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                        <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                    </div>
-                </div>
-                <Link to="/"><button className="btn btn-primary">Logout</button></Link>
-                <Link to="/login"><button className="btn btn-primary">Login</button></Link>
+            <div className="navbar-end space-x-2">
+                {
+                    user ? 
+                    <>
+                        <div className="flex items-center space-x-2">
+                            <div className="avatar tooltip tooltip-bottom" data-tip={user.displayName}>
+                                <div className="w-11 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                    <img src={user.photoURL ? user.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
+                                </div>
+                            </div>
+                            <Link to="/" ><button className="btn btn-primary" onClick={handleLogOut}>Logout</button></Link>
+                        </div>
+                    </>
+                    :
+                    <Link to="/login"><button className="btn btn-primary">Login</button></Link>
+                }
             </div>
         </div>
     );
