@@ -13,6 +13,7 @@ import Register from './components/Register/Register';
 import UpdateProfile from './components/UpdateProfile/UpdateProfile';
 import AuthProviders from './providers/AuthProviders';
 import PrivateRoutes from './components/Routes/PrivateRoutes';
+import UserProfile from './components/UserProfile/UserProfile';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/update-profile",
         element: <PrivateRoutes><UpdateProfile></UpdateProfile></PrivateRoutes>,
+      },
+      {
+        path: "/user-profile",
+        element: <PrivateRoutes><UserProfile></UserProfile></PrivateRoutes>
       }
     ],
   },

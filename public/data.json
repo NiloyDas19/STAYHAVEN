@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Luxurious Beachfront Resort",
+        "segment_name": "Resorts",
+        "description": "Experience luxury and relaxation at our beachfront resort. Featuring spacious rooms, stunning ocean views, and world-class amenities.",
+        "price": "$500,000",
+        "status": "sale",
+        "area": "5000 sq ft",
+        "location": "Tropical Paradise Island",
+        "facilities": [
+            "Swimming Pool",
+            "Spa",
+            "Fitness Center"
+        ],
+        "image": "https://example.com/beachfront-resort.jpg"
+    },
+    {
+        "id": 2,
+        "estate_title": "Charming Mountain Lodge",
+        "segment_name": "Lodges",
+        "description": "Escape to the mountains and enjoy the cozy atmosphere of our charming lodge. Perfect for outdoor enthusiasts and nature lovers.",
+        "price": "$300,000",
+        "status": "sale",
+        "area": "3000 sq ft",
+        "location": "Serenity Valley",
+        "facilities": [
+            "Fireplace",
+            "Hiking Trails",
+            "Hot Tub"
+        ],
+        "image": "https://example.com/mountain-lodge.jpg"
+    },
+    {
+        "id": 3,
+        "estate_title": "Modern City Apartment",
+        "segment_name": "Vacation Rentals",
+        "description": "Stay in style in our modern city apartment. Located in the heart of downtown, it offers convenience and comfort for your urban getaway.",
+        "price": "$200 per night",
+        "status": "rent",
+        "area": "1000 sq ft",
+        "location": "Metropolis City",
+        "facilities": [
+            "Balcony",
+            "Gym",
+            "Concierge Service"
+        ],
+        "image": "https://example.com/city-apartment.jpg"
+    },
+    {
+        "id": 4,
+        "estate_title": "Cozy Guesthouse",
+        "segment_name": "Guesthouses",
+        "description": "Experience true hospitality at our cozy guesthouse. With comfortable rooms and personalized service, you'll feel right at home.",
+        "price": "$100 per night",
+        "status": "rent",
+        "area": "1500 sq ft",
+        "location": "Quaint Village",
+        "facilities": [
+            "Breakfast Included",
+            "Free Wi-Fi",
+            "Garden"
+        ],
+        "image": "https://example.com/guesthouse.jpg"
+    },
+    {
+        "id": 5,
+        "estate_title": "Elegant Boutique Hotel",
+        "segment_name": "Hotels",
+        "description": "Indulge in luxury at our elegant boutique hotel. With sophisticated decor and impeccable service, it's the perfect choice for a memorable stay.",
+        "price": "$700,000",
+        "status": "sale",
+        "area": "7000 sq ft",
+        "location": "Historic District",
+        "facilities": [
+            "Fine Dining Restaurant",
+            "Rooftop Bar",
+            "Business Center"
+        ],
+        "image": "https://example.com/boutique-hotel.jpg"
+    },
+    {
+        "id": 6,
+        "estate_title": "Tranquil Riverside Retreat",
+        "segment_name": "Resorts",
+        "description": "Escape the hustle and bustle at our tranquil riverside retreat. Surrounded by nature, it's the ideal destination for relaxation and rejuvenation.",
+        "price": "$400,000",
+        "status": "sale",
+        "area": "4000 sq ft",
+        "location": "Riverfront Sanctuary",
+        "facilities": [
+            "River Access",
+            "Picnic Area",
+            "Bike Rentals"
+        ],
+        "image": "https://example.com/riverside-retreat.jpg"
+    },
+    {
+        "id": 7,
+        "estate_title": "Quaint Countryside Cottage",
+        "segment_name": "Vacation Rentals",
+        "description": "Experience the charm of the countryside in our quaint cottage. With picturesque views and cozy interiors, it's the perfect escape from the city.",
+        "price": "$150 per night",
+        "status": "rent",
+        "area": "1200 sq ft",
+        "location": "Idyllic Countryside",
+        "facilities": [
+            "Fire Pit",
+            "Barbecue Grill",
+            "Pet-Friendly"
+        ],
+        "image": "https://example.com/countryside-cottage.jpg"
+    },
+    {
+        "id": 8,
+        "estate_title": "Rustic Mountain Cabin",
+        "segment_name": "Lodges",
+        "description": "Embrace the rugged beauty of the mountains in our rustic cabin. With woodsy charm and modern comforts, it's the ultimate mountain getaway.",
+        "price": "$250,000",
+        "status": "sale",
+        "area": "2500 sq ft",
+        "location": "Mountain Wilderness",
+        "facilities": [
+            "Wood-Burning Stove",
+            "Outdoor Deck",
+            "Ski Storage"
+        ],
+        "image": "https://example.com/mountain-cabin.jpg"
+    },
+    {
+        "id": 9,
+        "estate_title": "Seaside Bed and Breakfast",
+        "segment_name": "Guesthouses",
+        "description": "Wake up to stunning ocean views at our seaside bed and breakfast. With cozy accommodations and personalized service, it's a seaside retreat like no other.",
+        "price": "$125 per night",
+        "status": "rent",
+        "area": "1800 sq ft",
+        "location": "Coastal Haven",
+        "facilities": [
+            "Oceanfront Terrace",
+            "Homemade Breakfast",
+            "Bicycle Rentals"
+        ],
+        "image": "https://example.com/seaside-bed-and-breakfast.jpg"
+    }
+]

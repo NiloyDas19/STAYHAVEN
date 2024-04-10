@@ -4,8 +4,17 @@ import { AuthContext } from "../../providers/AuthProviders";
 
 
 const Navbar = () => {
-    const {user, logOut} = useContext(AuthContext);
+    const {user, logOut, loading} = useContext(AuthContext);
 
+    if(loading){
+        return (
+            <div className="text-center">
+                <span className="loading loading-spinner loading-sm mx-auto"></span>
+                <span className="loading loading-spinner loading-md mx-auto"></span>
+                <span className="loading loading-spinner loading-lg mx-auto"></span>
+            </div>
+        );
+    }
 
     const handleLogOut = () => {
         console.log(user);
@@ -21,6 +30,7 @@ const Navbar = () => {
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/update-profile">Update Profile</NavLink></li>
+        <li><NavLink to="/user-profile">User Profile</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -50,7 +60,7 @@ const Navbar = () => {
                     <>
                         <div className="flex items-center space-x-2">
                             <div className="avatar tooltip tooltip-bottom" data-tip={user.displayName}>
-                                <div className="w-11 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                <div className="w-8 md:w-11 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                     <img src={user.photoURL ? user.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
                                 </div>
                             </div>
