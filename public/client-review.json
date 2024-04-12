@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "client_name": "Jessica Smith",
+        "client_profession": "Business Executive",
+        "client_image": "https://i.ibb.co/4j4Fx79/client9.jpg",
+        "review": "The beachfront resort exceeded all my expectations! The rooms were luxurious, the staff was attentive, and the views were breathtaking. It was the perfect getaway for relaxation and rejuvenation."
+    },
+    {
+        "id": 2,
+        "client_name": "Michael Johnson",
+        "client_profession": "Adventure Photographer",
+        "client_image": "https://i.ibb.co/DGN4pyn/client1.jpg",
+        "review": "As an outdoor enthusiast and photographer, the charming mountain lodge provided the perfect backdrop for my adventures. The rustic ambiance and scenic surroundings made for an unforgettable experience."
+    },
+    {
+        "id": 3,
+        "client_name": "Emily Davis",
+        "client_profession": "Marketing Consultant",
+        "client_image": "https://i.ibb.co/gRnRv2h/client8.jpg",
+        "review": "The modern city apartment was the perfect home base for my urban getaway. It was centrally located, well-appointed, and offered all the amenities I needed for a comfortable stay."
+    },
+    {
+        "id": 4,
+        "client_name": "David Brown",
+        "client_profession": "Travel Blogger",
+        "client_image": "https://i.ibb.co/kqcnm3F/client2.jpg",
+        "review": "Staying at the cozy guesthouse was like being welcomed into a warm and inviting home. The host was friendly, the accommodations were comfortable, and the garden provided a peaceful retreat."
+    },
+    {
+        "id": 5,
+        "client_name": "Sophia Clark",
+        "client_profession": "Art Curator",
+        "client_image": "https://i.ibb.co/0201CCZ/client7.jpg",
+        "review": "The elegant boutique hotel surpassed all my expectations! From the exquisite decor to the impeccable service, every detail was thoughtfully curated. It was truly a memorable stay."
+    },
+    {
+        "id": 6,
+        "client_name": "Daniel White",
+        "client_profession": "Tech Entrepreneur",
+        "client_image": "https://i.ibb.co/1R5v6pL/client3.jpg",
+        "review": "The seaside bed and breakfast offered a perfect blend of comfort and charm. Waking up to the sound of waves and enjoying a homemade breakfast on the oceanfront terrace was an unforgettable experience."
+    },
+    {
+        "id": 7,
+        "client_name": "Olivia Harris",
+        "client_profession": "Interior Designer",
+        "client_image": "https://i.ibb.co/zSsbmHL/client5.jpg",
+        "review": "The rustic mountain cabin was a cozy retreat amidst nature's beauty. The wood-burning stove and outdoor deck provided the perfect setting for cozy evenings and stargazing."
+    },
+    {
+        "id": 8,
+        "client_name": "Ethan Martinez",
+        "client_profession": "Food Critic",
+        "client_image": "https://i.ibb.co/VNCS2TB/client4.jpg",
+        "review": "The seaside bed and breakfast offered a perfect blend of comfort and charm. Waking up to the sound of waves and enjoying a homemade breakfast on the oceanfront terrace was an unforgettable experience."
+    },
+    {
+        "id": 9,
+        "client_name": "Isabella Thompson",
+        "client_profession": "Travel Writer",
+        "client_image": "https://i.ibb.co/gZLDM4J/client6.jpg",
+        "review": "The quaint countryside cottage was a picturesque retreat away from the hustle and bustle of city life. The fire pit and barbecue grill provided the perfect setting for cozy evenings and outdoor gatherings."
+    }
+]

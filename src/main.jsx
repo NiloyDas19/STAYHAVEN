@@ -15,6 +15,7 @@ import AuthProviders from './providers/AuthProviders';
 import PrivateRoutes from './components/Routes/PrivateRoutes';
 import UserProfile from './components/UserProfile/UserProfile';
 import ViewProperty from './components/ViewProperty/ViewProperty';
+import ClientReview from './components/ClientReview/ClientReview';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
         path : "/view-property/:id",
         element: <PrivateRoutes><ViewProperty></ViewProperty></PrivateRoutes>,
         loader : () => fetch('../public/data.json'),
+      },
+      {
+        path: "client-review",
+        element: <PrivateRoutes><ClientReview></ClientReview></PrivateRoutes>,
       }
     ],
   },
