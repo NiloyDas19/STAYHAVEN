@@ -16,7 +16,7 @@ const Hotel = ({ hotel }) => {
     console.log(id);
 
     return (
-        <div className='rounded-2xl border-2 text-[#1C4456] flex flex-col space-y-5' data-aos = {(id & 1) ? "fade-up-left" : "fade-down-right" }>
+        <div className='rounded-2xl border-2 text-[#1C4456] flex flex-col space-y-5' data-aos = {(id & 1) ? "fade-up" : "fade-down" }>
             <div className=''>
                 <img src={image} className='w-full rounded-t-2xl' alt="" />
             </div>
