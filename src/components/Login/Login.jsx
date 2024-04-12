@@ -1,17 +1,21 @@
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2';
+import DocumentTitle from './../../documentTitle/DocumentTitle';
 
 
 const Login = () => {
+    DocumentTitle('Login');
     const [showPassword, setShowPassword] = useState(false);
     const { loginWithEmailPassword, loginWithGoogle, loginWithGithub } = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
+    console.log(location);
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -28,7 +32,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate("/");
+                navigate(location?.state ? location.state : "/");
             })
             .catch(error => {
                 Swal.fire({
@@ -51,7 +55,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate("/");
+                navigate(location?.state ? location.state : "/");
             })
             .catch((error) => {
                 Swal.fire({
@@ -74,7 +78,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate("/");
+                navigate(location?.state ? location.state : "/");
             })
             .catch((error) => {
                 Swal.fire({

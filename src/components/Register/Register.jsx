@@ -8,6 +8,8 @@ import auth from "../../firebase/firebase.config";
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2';
+import DocumentTitle from './../../documentTitle/DocumentTitle';
+
 
 
 const Register = () => {
@@ -15,7 +17,7 @@ const Register = () => {
     const { createUserWithEmailPassword, createWithGoogle, createWithGithub } = useContext(AuthContext);
 
     const navigate = useNavigate();
-
+    DocumentTitle('Register');
 
     const handleRegister = (e) => {
         e.preventDefault();

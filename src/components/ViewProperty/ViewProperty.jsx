@@ -3,11 +3,14 @@ import { FaLocationDot } from 'react-icons/fa6';
 import { PiCirclesFourBold } from 'react-icons/pi';
 import { useParams, useLoaderData } from 'react-router-dom';
 import { MdOutlineSell } from "react-icons/md";
+import DocumentTitle from './../../documentTitle/DocumentTitle';
 
 
 const ViewProperty = () => {
     const { id } = useParams();
     const hotels = useLoaderData();
+
+    DocumentTitle('View Property');
 
     const hotel = hotels.find((hotel) => hotel.id === parseInt(id));
 

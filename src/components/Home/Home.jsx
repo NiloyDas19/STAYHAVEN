@@ -5,9 +5,13 @@ import image3 from "../../assets/image3.jpg";
 import image4 from "../../assets/image4.jpg";
 import { useEffect } from "react";
 import Hotel from "../Hotel/Hotel";
+import DocumentTitle from './../../documentTitle/DocumentTitle';
+
 
 const Home = () => {
     const [hotels, setHotels] = useState([]);
+
+    DocumentTitle('Home');
 
     const bannerHeading = <>
         <div className=" text-white">

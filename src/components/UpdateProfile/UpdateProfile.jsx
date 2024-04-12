@@ -4,11 +4,15 @@ import swal from 'sweetalert';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
+import DocumentTitle from './../../documentTitle/DocumentTitle';
+
 
 
 const UpdateProfile = () => {
     const navigate = useNavigate();
     const {user} = useContext(AuthContext);
+
+    DocumentTitle('Update Profile');
 
     const handleUpdateProfile = (e) => {
         e.preventDefault();

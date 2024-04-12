@@ -1,9 +1,12 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
 import { Link } from "react-router-dom";
+import DocumentTitle from './../../documentTitle/DocumentTitle';
+
 
 const UserProfile = () => {
     const { user } = useContext(AuthContext);
+    DocumentTitle('User Profile');
     return (
         <div className="flex min-h-screen items-center">
             <div className="w-[90%] md:w-1/2 mx-auto rounded-2xl bg-blue-100">
