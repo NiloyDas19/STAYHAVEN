@@ -14,6 +14,7 @@ import UpdateProfile from './components/UpdateProfile/UpdateProfile';
 import AuthProviders from './providers/AuthProviders';
 import PrivateRoutes from './components/Routes/PrivateRoutes';
 import UserProfile from './components/UserProfile/UserProfile';
+import ViewProperty from './components/ViewProperty/ViewProperty';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,12 @@ const router = createBrowserRouter([
       {
         path: "/user-profile",
         element: <PrivateRoutes><UserProfile></UserProfile></PrivateRoutes>
+      },
+      {
+
+        path : "/view-property/:id",
+        element: <PrivateRoutes><ViewProperty></ViewProperty></PrivateRoutes>,
+        loader : () => fetch('../public/data.json'),
       }
     ],
   },
