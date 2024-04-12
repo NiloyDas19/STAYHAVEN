@@ -9,8 +9,9 @@ import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2';
 import DocumentTitle from './../../documentTitle/DocumentTitle';
-
-
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -18,6 +19,11 @@ const Register = () => {
 
     const navigate = useNavigate();
     DocumentTitle('Register');
+
+    useEffect(()=>{
+        Aos.init({duration: 2000});
+
+    },[]);
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -120,7 +126,7 @@ const Register = () => {
 
 
     return (
-        <div className="hero min-h-screen mx-auto">
+        <div className="hero min-h-screen mx-auto" data-aos = "zoom-in-down">
             <div className="card w-full md:w-1/2 max-w-sm md:max-w-xl shadow-2xl bg-base-100 p-10">
                 <div className="text-center mt-5">
                     <h2 className="text-2xl md:text-4xl text-blue-500 font-bold">Register Here</h2>

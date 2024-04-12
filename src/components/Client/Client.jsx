@@ -1,9 +1,18 @@
 import PropTypes from 'prop-types';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Client = ({client}) => {
-    const {client_name, client_profession, client_image, review} = client;
+    const {id, client_name, client_profession, client_image, review} = client;
+
+    useEffect(()=>{
+        Aos.init({duration: 2000});
+
+    },[]);
+
     return (
-        <div className='flex flex-col-reverse md:flex-col rounded-xl border-2 border-blue-500 px-5 py-5 space-y-8 shadow-xl'>
+        <div className='flex flex-col-reverse md:flex-col rounded-xl border-2 border-blue-500 px-5 py-5 space-y-8 shadow-xl' data-aos = {(id & 1) ? "zoom-in-down" : "zoom-in-up"}>
             <div className='flex-grow text-2xl'>
                 {
                     review
