@@ -26,6 +26,8 @@ const Home = () => {
             .then(data => setHotels(data));
     }, []);
 
+    
+
     return (
         <div className="space-y-10">
 

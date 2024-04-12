@@ -3,14 +3,20 @@ import { FaLocationDot } from "react-icons/fa6";
 import { BiSolidArea } from "react-icons/bi";
 import { PiCirclesFourBold } from "react-icons/pi";
 import { Link } from 'react-router-dom';
-
-
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Hotel = ({ hotel }) => {
     const { id, image, estate_title, location, area, segment_name, price } = hotel;
+    useEffect(()=>{
+        Aos.init({duration: 2000});
+
+    },[]);
     console.log(id);
+
     return (
-        <div className='rounded-2xl border-2 text-[#1C4456] flex flex-col space-y-5'>
+        <div className='rounded-2xl border-2 text-[#1C4456] flex flex-col space-y-5' data-aos = {(id & 1) ? "fade-up-left" : "fade-down-right" }>
             <div className=''>
                 <img src={image} className='w-full rounded-t-2xl' alt="" />
             </div>
