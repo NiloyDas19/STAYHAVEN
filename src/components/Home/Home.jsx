@@ -1,11 +1,8 @@
 import { useState } from "react";
-import image1 from "../../assets/image1.jpg";
-import image2 from "../../assets/image2.jpg";
-import image3 from "../../assets/image3.jpg";
-import image4 from "../../assets/image4.jpg";
 import { useEffect } from "react";
 import Hotel from "../Hotel/Hotel";
 import DocumentTitle from './../../documentTitle/DocumentTitle';
+import Banner from "../Banner/Banner";
 
 
 const Home = () => {
@@ -13,12 +10,6 @@ const Home = () => {
 
     DocumentTitle('Home');
 
-    const bannerHeading = <>
-        <div className=" text-white">
-            <h2 className="font-bold text-3xl md:text-7xl">STAY<span className="text-blue-500">HAVEN</span></h2>
-            <p>Choose your destination</p>
-        </div>
-    </>
 
     useEffect(() => {
         fetch('data.json')
@@ -31,7 +22,7 @@ const Home = () => {
     return (
         <div className="space-y-10">
 
-            {/* Banner section */}
+            {/* Banner section
             <div className="mx-auto px-5">
                 <div className="carousel w-full rounded-3xl">
                     <div id="item1" className="carousel-item w-full text-center py-32 md:py-56 flex flex-col bg-no-repeat bg-cover bg-center " style={{ backgroundImage: `url(${image1})` }}>
@@ -61,7 +52,9 @@ const Home = () => {
                     <a href="#item3" className="btn btn-xs">3</a>
                     <a href="#item4" className="btn btn-xs">4</a>
                 </div>
-            </div>
+            </div> */}
+            
+            <Banner></Banner>
 
             {/* State Section */}
             <div className="mx-auto px-5">

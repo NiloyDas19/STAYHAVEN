@@ -3,7 +3,7 @@ import background from "../../assets/background.svg";
 
 const Footer = () => {
     return (
-        <footer className="flex flex-col items-center p-10 bg-primary text-primary-content space-y-5 text-center bg-no-repeat bg-cover bg-center text-white" style={{ backgroundImage: `url(${background})` }}>
+        <footer className="flex flex-col items-center p-10 bg-primary  space-y-5 text-center bg-no-repeat bg-cover bg-center text-white" style={{ backgroundImage: `url(${background})` }}>
             <div>
                 <FaHome className="w-10 h-10"></FaHome>
             </div>
