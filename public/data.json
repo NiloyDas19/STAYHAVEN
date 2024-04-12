@@ -13,7 +13,7 @@
             "Spa",
             "Fitness Center"
         ],
-        "image": "https://example.com/beachfront-resort.jpg"
+        "image": "https://i.ibb.co/FgVWZSt/image1.jpg"
     },
     {
         "id": 2,
@@ -29,7 +29,7 @@
             "Hiking Trails",
             "Hot Tub"
         ],
-        "image": "https://example.com/mountain-lodge.jpg"
+        "image": "https://i.ibb.co/z7nFkQG/image2.jpg"
     },
     {
         "id": 3,
@@ -45,7 +45,7 @@
             "Gym",
             "Concierge Service"
         ],
-        "image": "https://example.com/city-apartment.jpg"
+        "image": "https://i.ibb.co/VmphNBY/image3.jpg"
     },
     {
         "id": 4,
@@ -61,7 +61,7 @@
             "Free Wi-Fi",
             "Garden"
         ],
-        "image": "https://example.com/guesthouse.jpg"
+        "image": "https://i.ibb.co/bgCmzyf/image4.jpg"
     },
     {
         "id": 5,
@@ -77,7 +77,7 @@
             "Rooftop Bar",
             "Business Center"
         ],
-        "image": "https://example.com/boutique-hotel.jpg"
+        "image": "https://i.ibb.co/vdgpLs8/image5.jpg"
     },
     {
         "id": 6,
@@ -93,7 +93,7 @@
             "Picnic Area",
             "Bike Rentals"
         ],
-        "image": "https://example.com/riverside-retreat.jpg"
+        "image": "https://i.ibb.co/G34wcS8/image6.jpg"
     },
     {
         "id": 7,
@@ -109,7 +109,7 @@
             "Barbecue Grill",
             "Pet-Friendly"
         ],
-        "image": "https://example.com/countryside-cottage.jpg"
+        "image": "https://i.ibb.co/8x4Q6x2/image7.jpg"
     },
     {
         "id": 8,
@@ -125,7 +125,7 @@
             "Outdoor Deck",
             "Ski Storage"
         ],
-        "image": "https://example.com/mountain-cabin.jpg"
+        "image": "https://i.ibb.co/TwsTY0D/image8.jpg"
     },
     {
         "id": 9,
@@ -141,6 +141,6 @@
             "Homemade Breakfast",
             "Bicycle Rentals"
         ],
-        "image": "https://example.com/seaside-bed-and-breakfast.jpg"
+        "image": "https://i.ibb.co/gtGBpcG/image9.jpg"
     }
 ]

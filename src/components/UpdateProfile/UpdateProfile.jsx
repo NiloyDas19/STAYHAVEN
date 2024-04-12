@@ -2,11 +2,13 @@ import {updateProfile } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import swal from 'sweetalert';
 import { useNavigate } from 'react-router-dom';
-
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProviders";
 
 
 const UpdateProfile = () => {
     const navigate = useNavigate();
+    const {user} = useContext(AuthContext);
 
     const handleUpdateProfile = (e) => {
         e.preventDefault();
@@ -50,13 +52,13 @@ const UpdateProfile = () => {
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
-                        <input type="text" placeholder="name" name="name" className="input input-bordered" required />
+                        <input type="text" placeholder={user.displayName} name="name" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Photo URL</span>
                         </label>
-                        <input type="text" placeholder="Photo URL" name="photoUrl" className="input input-bordered" required />
+                        <input type="text" placeholder={user.photoURL} name="photoUrl" className="input input-bordered" required />
                     </div>
                     <div className="form-control mt-6">
                         <button className="btn btn-primary">Save Changes</button>

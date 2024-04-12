@@ -1,15 +1,26 @@
+import { useState } from "react";
 import image1 from "../../assets/image1.jpg";
 import image2 from "../../assets/image2.jpg";
 import image3 from "../../assets/image3.jpg";
 import image4 from "../../assets/image4.jpg";
+import { useEffect } from "react";
+import Hotel from "../Hotel/Hotel";
 
 const Home = () => {
+    const [hotels, setHotels] = useState([]);
+
     const bannerHeading = <>
         <div className=" text-white">
             <h2 className="font-bold text-3xl md:text-7xl">STAY<span className="text-blue-500">HAVEN</span></h2>
             <p>Choose your destination</p>
         </div>
     </>
+
+    useEffect(() => {
+        fetch('data.json')
+        .then(res => res.json())
+        .then(data => setHotels(data));
+    }, []);
 
     return (
         <div className="space-y-10">
@@ -56,6 +67,13 @@ const Home = () => {
                     Voluptatum, laborum eligendi laboriosam, quod commodi, veniam placeat minima distinctio recusandae labore nesciunt blanditiis rem architecto! Rerum, minima praesentium molestiae ullam, ipsa dignissimos nobis incidunt corrupti modi doloribus soluta ratione.
                     Aperiam ratione, esse saepe quaerat explicabo eius voluptates eos labore consequuntur sapiente. Deserunt, assumenda esse numquam, adipisci alias id saepe voluptates doloremque eum rem accusantium perspiciatis doloribus totam quam sunt!</p>
                 </div>
+            </div>
+
+            {/* Estate section */}
+            <div className="mx-auto px-5 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+                {
+                    hotels.map(hotel => <Hotel key={hotel.id} hotel = {hotel}></Hotel>)
+                }
             </div>
         </div>
     );
