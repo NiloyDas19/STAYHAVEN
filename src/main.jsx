@@ -47,7 +47,7 @@ const router = createBrowserRouter([
 
         path : "/view-property/:id",
         element: <PrivateRoutes><ViewProperty></ViewProperty></PrivateRoutes>,
-        loader : () => fetch('../public/data.json'),
+        loader : () => fetch('../data.json'),
       },
       {
         path: "client-review",
