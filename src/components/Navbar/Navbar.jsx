@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 import navBackground from "../../assets/background.svg";
+import "animate.css";
 
 
 const Navbar = () => {
@@ -35,7 +36,7 @@ const Navbar = () => {
         <li><NavLink to="/client-review">Client Review</NavLink></li>
     </>
     return (
-        <div className="navbar bg-gray-200 flex-no-wrap fixed top-0 z-10 bg-no-repeat bg-cover bg-center text-white" style={{ backgroundImage: `url(${navBackground})` }}>
+        <div className="navbar bg-gray-200 flex-no-wrap fixed top-0 z-10 bg-no-repeat bg-cover bg-center lg:text-white animate__animated animate__fadeInDown" style={{ backgroundImage: `url(${navBackground})` }}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
