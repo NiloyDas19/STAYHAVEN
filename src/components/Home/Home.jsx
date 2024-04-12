@@ -22,8 +22,8 @@ const Home = () => {
 
     useEffect(() => {
         fetch('data.json')
-        .then(res => res.json())
-        .then(data => setHotels(data));
+            .then(res => res.json())
+            .then(data => setHotels(data));
     }, []);
 
     return (
@@ -37,17 +37,17 @@ const Home = () => {
                             bannerHeading
                         }
                     </div>
-                    <div id="item2"  className="carousel-item w-full text-center py-32 md:py-56 flex flex-col bg-no-repeat bg-cover bg-center " style={{ backgroundImage: `url(${image2})` }}>
+                    <div id="item2" className="carousel-item w-full text-center py-32 md:py-56 flex flex-col bg-no-repeat bg-cover bg-center " style={{ backgroundImage: `url(${image2})` }}>
                         {
                             bannerHeading
                         }
                     </div>
-                    <div id="item3"  className="carousel-item w-full text-center py-32 md:py-56 flex flex-col bg-no-repeat bg-cover bg-center " style={{ backgroundImage: `url(${image3})` }}>
+                    <div id="item3" className="carousel-item w-full text-center py-32 md:py-56 flex flex-col bg-no-repeat bg-cover bg-center " style={{ backgroundImage: `url(${image3})` }}>
                         {
                             bannerHeading
                         }
                     </div>
-                    <div id="item4"  className="carousel-item w-full text-center py-32 md:py-56 flex flex-col bg-no-repeat bg-cover bg-center " style={{ backgroundImage: `url(${image4})` }}>
+                    <div id="item4" className="carousel-item w-full text-center py-32 md:py-56 flex flex-col bg-no-repeat bg-cover bg-center " style={{ backgroundImage: `url(${image4})` }}>
                         {
                             bannerHeading
                         }
@@ -65,18 +65,16 @@ const Home = () => {
             <div className="mx-auto px-5">
                 <div className="text-center space-y-5">
                     <h2 className="text-3xl font-bold">ESTATE</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nesciunt officia atque, dolorum doloribus nihil tenetur nam amet voluptates ipsa quidem. Odit totam cumque dolore amet nostrum excepturi laboriosam mollitia!
-                    Aliquam animi, corporis expedita exercitationem quasi dolorum nostrum quibusdam officiis eos quos minima sint nobis ut magni dicta mollitia, reiciendis tenetur assumenda cupiditate, maiores molestiae a ipsam repudiandae consectetur! Reprehenderit.
-                    Atque, dicta? Ipsa nisi ipsam nulla, debitis natus corporis, placeat sequi, nobis hic harum aliquid error omnis ut. Dolores cumque id accusantium, facilis ad laudantium aliquam placeat ipsa earum officia.
-                    Voluptatum, laborum eligendi laboriosam, quod commodi, veniam placeat minima distinctio recusandae labore nesciunt blanditiis rem architecto! Rerum, minima praesentium molestiae ullam, ipsa dignissimos nobis incidunt corrupti modi doloribus soluta ratione.
-                    Aperiam ratione, esse saepe quaerat explicabo eius voluptates eos labore consequuntur sapiente. Deserunt, assumenda esse numquam, adipisci alias id saepe voluptates doloremque eum rem accusantium perspiciatis doloribus totam quam sunt!</p>
+                    <p>
+                        STAYHAVEN is a premier estate website dedicated to providing an unparalleled experience in the realm of hospitality. Our platform specializes in curating a diverse selection of accommodations, including hotels, motels, resorts, vacation rentals, lodges, guesthouses, and more. At STAYHAVEN, we understand that every traveler seeks a haven away from home, and our mission is to ensure that their stay is nothing short of extraordinary. Whether you are planning a luxurious resort getaway, a cozy lodge retreat, or an adventurous stay in a vacation rental, STAYHAVEN offers a comprehensive range of options to suit every preference and budget. With a commitment to excellence, personalized service, and seamless booking experiences, STAYHAVEN strives to make your journey memorable and your stay unforgettable. Welcome to your haven away from home – welcome to STAYHAVEN.
+                    </p>
                 </div>
             </div>
 
             {/* Estate section */}
             <div className="mx-auto px-5 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
                 {
-                    hotels.map(hotel => <Hotel key={hotel.id} hotel = {hotel}></Hotel>)
+                    hotels.map(hotel => <Hotel key={hotel.id} hotel={hotel}></Hotel>)
                 }
             </div>
         </div>
