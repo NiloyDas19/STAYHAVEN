@@ -61,7 +61,7 @@ const Register = () => {
                 result.user.photoURL = photoUrl;
                 Swal.fire({
                     icon: "success",
-                    title: "Login Successful!",
+                    title: "Registration Successful!",
                     showConfirmButton: false,
                     timer: 1500
                 });
@@ -85,7 +85,7 @@ const Register = () => {
                 console.log(result.user);
                 Swal.fire({
                     icon: "success",
-                    title: "Login Successful!",
+                    title: "Registration Successful!",
                     showConfirmButton: false,
                     timer: 1500
                 });
@@ -108,7 +108,7 @@ const Register = () => {
                 console.log(result.user);
                 Swal.fire({
                     icon: "success",
-                    title: "Login Successful!",
+                    title: "Registration Successful!",
                     showConfirmButton: false,
                     timer: 1500
                 });
