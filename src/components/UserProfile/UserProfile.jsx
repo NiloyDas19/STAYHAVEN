@@ -26,6 +26,7 @@ const UserProfile = () => {
                         <div className="flex-grow">
                             <h2 className=""><span className="font-bold">Name : </span> {user.displayName}</h2>
                             <h2 className=""><span className="font-bold">Email : </span> {user.email}</h2>
+                            <h2 className=""><span className="font-bold">Photo URL : </span> {user.photoURL}</h2>
                         </div>
                         <div className="">
                             <Link to="/update-profile" className="btn btn-outline btn-primary shadow-2xl">Update Profile</Link>

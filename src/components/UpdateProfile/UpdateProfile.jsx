@@ -67,6 +67,12 @@ const UpdateProfile = () => {
                     </div>
                     <div className="form-control">
                         <label className="label">
+                            <span className="label-text">Email</span>
+                        </label>
+                        <input type="text" placeholder={user.email} name="email" className="input input-bordered" disabled />
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
                             <span className="label-text">Photo URL</span>
                         </label>
                         <input type="text" placeholder={user.photoURL} name="photoUrl" className="input input-bordered" required />

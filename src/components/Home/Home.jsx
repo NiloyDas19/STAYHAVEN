@@ -59,7 +59,7 @@ const Home = () => {
             {/* State Section */}
             <div className="mx-auto px-5">
                 <div className="text-center space-y-5">
-                    <h2 className="text-3xl font-bold">ESTATE</h2>
+                    <h2 className="text-4xl font-bold">ESTATES</h2>
                     <p>
                         STAYHAVEN is a premier estate website dedicated to providing an unparalleled experience in the realm of hospitality. Our platform specializes in curating a diverse selection of accommodations, including hotels, motels, resorts, vacation rentals, lodges, guesthouses, and more. At STAYHAVEN, we understand that every traveler seeks a haven away from home, and our mission is to ensure that their stay is nothing short of extraordinary. Whether you are planning a luxurious resort getaway, a cozy lodge retreat, or an adventurous stay in a vacation rental, STAYHAVEN offers a comprehensive range of options to suit every preference and budget. With a commitment to excellence, personalized service, and seamless booking experiences, STAYHAVEN strives to make your journey memorable and your stay unforgettable. Welcome to your haven away from home – welcome to STAYHAVEN.
                     </p>
