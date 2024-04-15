@@ -1,5 +1,5 @@
 import { FcGoogle } from "react-icons/fc";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
 import { AuthContext } from "../../providers/AuthProviders";
@@ -18,7 +18,6 @@ const Register = () => {
     const { createUserWithEmailPassword, createWithGoogle, createWithGithub } = useContext(AuthContext);
 
     const navigate = useNavigate();
-    const location = useLocation();
     DocumentTitle('Register');
 
     useEffect(()=>{

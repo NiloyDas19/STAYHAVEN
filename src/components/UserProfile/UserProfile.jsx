@@ -17,7 +17,7 @@ const UserProfile = () => {
     },[]);
     return (
         <div className="flex min-h-screen items-center" data-aos = "zoom-in-down">
-            <div className="w-[90%] md:w-1/2 mx-auto rounded-2xl bg-blue-100">
+            <div className="w-[90%]  mx-auto rounded-2xl bg-blue-100">
                 <div className="grid  grid-cols-1 md:grid-cols-2 w-full rounded-2xl border-2 border-blue-500 shadow-2xl">
                     <div className="p-5">
                         <img src={user.photoURL}  className="w-full rounded-2xl mx-auto border-2 shadow-2xl border-orange-500" alt="User Image Not Found" />
