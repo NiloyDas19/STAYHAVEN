@@ -14,7 +14,7 @@ import { useEffect } from 'react';
 const Login = () => {
     DocumentTitle('Login');
     const [showPassword, setShowPassword] = useState(false);
-    const { loginWithEmailPassword, loginWithGoogle, loginWithGithub } = useContext(AuthContext);
+    const { loginWithEmailPassword, loginWithGoogle, loginWithGithub, setLoading } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     console.log(location);
@@ -40,6 +40,7 @@ const Login = () => {
                     timer: 1500
                 });
                 navigate(location?.state ? location.state : "/");
+                e.target.reset();
             })
             .catch(error => {
                 Swal.fire({
@@ -47,9 +48,9 @@ const Login = () => {
                     title: "Oops...",
                     text: error.message,
                 });
+                setLoading(false);
                 console.log(error.message);
             })
-            e.target.reset();
     }
 
     const handleLoginWithGoogle = () => {
@@ -70,6 +71,7 @@ const Login = () => {
                     title: "Oops...",
                     text: error.message,
                 });
+                setLoading(false);
                 console.log(error.message);
             });
     }
@@ -93,6 +95,7 @@ const Login = () => {
                     title: "Oops...",
                     text: error.message,
                 });
+                setLoading(false);
                 console.log(error.message);
             });
     }

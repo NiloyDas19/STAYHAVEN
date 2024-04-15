@@ -76,6 +76,7 @@ const AuthProviders = ({children}) => {
         createWithGithub,
         loginWithGithub,
         loading,
+        setLoading,
     }
 
     return (
