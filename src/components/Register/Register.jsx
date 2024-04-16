@@ -1,5 +1,5 @@
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
 import { AuthContext } from "../../providers/AuthProviders";
@@ -15,10 +15,11 @@ import { useEffect } from 'react';
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
-    const { createUserWithEmailPassword, createWithGoogle, createWithGithub } = useContext(AuthContext);
+    const { createUserWithEmailPassword, createWithGoogle, createWithGithub, setLoading } = useContext(AuthContext);
 
     const navigate = useNavigate();
     DocumentTitle('Register');
+    const location = useLocation();
 
     useEffect(()=>{
         Aos.init({duration: 2000});
@@ -65,7 +66,7 @@ const Register = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate("/");
+                navigate(location?.state ? location?.state : "/");
                 e.target.reset();
             })
             .catch(error => {
@@ -74,6 +75,7 @@ const Register = () => {
                     title: "Oops...",
                     text: error.message,
                 });
+                setLoading(false);
                 console.log(error.message);
             });
             }
@@ -88,7 +90,7 @@ const Register = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate("/");
+                navigate(location?.state ? location?.state : "/");
             })
             .catch((error) => {
                 Swal.fire({
@@ -96,6 +98,7 @@ const Register = () => {
                     title: "Oops...",
                     text: error.message,
                 });
+                setLoading(false);
                 console.log(error.message);
             })
     }
@@ -111,7 +114,7 @@ const Register = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate("/");
+                navigate(location?.state ? location?.state : "/");
             })
             .catch(error => {
                 Swal.fire({
@@ -119,6 +122,7 @@ const Register = () => {
                     title: "Oops...",
                     text: error.message,
                 });
+                setLoading(false);
                 console.log(error.message);
             });
     }
